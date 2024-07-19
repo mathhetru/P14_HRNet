@@ -1,4 +1,4 @@
-const statesData = [
+export const statesData = [
   {
     name: "Alabama",
     abbreviation: "AL",
@@ -237,12 +237,3 @@ const statesData = [
   },
 ];
 
-export const states = () => {
-  return statesData.map(
-    (state: { name: string; abbreviation: string }, index: number) => ({
-      name: state.name,
-      abbreviation: state.abbreviation,
-      id: index,
-    }),
-  );
-};
