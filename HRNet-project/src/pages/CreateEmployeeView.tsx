@@ -1,31 +1,17 @@
 import { useState } from "react";
 import { Calendar } from "primereact/calendar";
 import { Dropdown } from "primereact/dropdown";
-import { departmentsData } from "../data/departments";
-import { statesData } from "../data/states";
+import { departments } from "../data/departments";
+import { states } from "../data/states";
 
 function CreateEmployeeView() {
-  const [date, setDate] = useState<Date | undefined | null>(new Date());
+  const [birthDate, setBirthDate] = useState<Date | undefined | null>(
+    new Date(),
+  );
+  const [startDate, setStartDate] = useState<Date | undefined | null>(
+    new Date(),
+  );
   const [selectedDepartment, setSelectedDepartment] = useState(null);
-
-  const departments = () => {
-    return departmentsData.map(
-      (department: { name: string }, index: number) => ({
-        name: department.name,
-        id: index,
-      }),
-    );
-  };
-
-  const states = () => {
-    return statesData.map(
-      (state: { name: string; abbreviation: string }, index: number) => ({
-        name: state.name,
-        abbreviation: state.abbreviation,
-        id: index,
-      }),
-    );
-  };
 
   return (
     <>
@@ -40,10 +26,10 @@ function CreateEmployeeView() {
           <input type="text" id="last-name" />
 
           <label htmlFor="date-of-birth">Date of Birth</label>
-          <Calendar value={date} onChange={(e) => setDate(e.value)} />
+          <Calendar value={birthDate} onChange={(e) => setBirthDate(e.value)} />
 
           <label htmlFor="start-date">Start Date</label>
-          <Calendar value={date} onChange={(e) => setDate(e.value)} />
+          <Calendar value={startDate} onChange={(e) => setStartDate(e.value)} />
 
           <fieldset className="address">
             <legend>Address</legend>
@@ -60,7 +46,7 @@ function CreateEmployeeView() {
               onChange={(e) => setSelectedDepartment(e.value)}
               options={states()}
               optionLabel="name"
-              placeholder="Select a Department"
+              placeholder="Select a department"
               className="w-full md:w-14rem"
             />
 

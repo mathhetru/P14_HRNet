@@ -1,5 +1,5 @@
 export interface EmployeesStore {
-  // employees: (employeesList: Employee[]) => void;
+  numberOfEmployees: (employeesList: Employee[]) => void;
   employeesList: Employee[];
   addEmployee: (employee: Employee) => void;
 }

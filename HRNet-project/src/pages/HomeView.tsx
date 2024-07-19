@@ -10,10 +10,19 @@ function HomeView() {
       <div id="employee-div" className="container">
         <h1>Current Employees</h1>
         <DataTable value={employeesList} tableStyle={{ minWidth: "50rem" }}>
-          <Column field="code" header="Code"></Column>
-          <Column field="name" header="Name"></Column>
-          <Column field="category" header="Category"></Column>
-          <Column field="quantity" header="Quantity"></Column>
+          <Column field="firstName" header="firstName"></Column>
+          <Column field="lastName" header="lastName"></Column>
+          <Column field="department" header="department"></Column>
+          <Column
+            field="dateOfBirth"
+            header="dateOfBirth"
+            dataType="date"
+          ></Column>
+          <Column field="startDate" header="startDate" dataType="date"></Column>
+          <Column field="street" header="street"></Column>
+          <Column field="city" header="city"></Column>
+          <Column field="state" header="state"></Column>
+          <Column field="zipCode" header="zipCode"></Column>
         </DataTable>
       </div>
     </>
