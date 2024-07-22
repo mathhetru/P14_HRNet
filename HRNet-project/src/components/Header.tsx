@@ -4,14 +4,14 @@ import logo from "../assets/HRNet_logo.png";
 function Header() {
   return (
     <header className="header">
-      <div>
+      <div className="header-logo">
         <Link to="/">
-          <img src={logo} alt="hrnet-logo" className="header__logo" />
+          <img src={logo} alt="hrnet-logo" className="header-logo__img" />
         </Link>
-        <p>HR Net</p>
+        <p className="header-logo__text">HR Net</p>
       </div>
-      <button className="header-nav">
-        <Link className="header-nav__link" to="/create-employee">
+      <button className="header-button">
+        <Link className="header-button__link" to="/create-employee">
           Create new employee
         </Link>
       </button>
