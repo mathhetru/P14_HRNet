@@ -8,7 +8,11 @@ import type {
 } from "../types/employees.type.ts";
 import { Calendar } from "primereact/calendar";
 import { Dropdown } from "primereact/dropdown";
-import { departments, states, formatEmployeeForm } from "../utils/utils.ts";
+import {
+  departmentsForSelect,
+  statesForSelect,
+  formatEmployeeForm,
+} from "../utils/utils.ts";
 
 function CreateEmployeeView() {
   const { addEmployee } = useStore();
@@ -43,7 +47,7 @@ function CreateEmployeeView() {
       <div className="container">
         <Link to="/employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
-        <form action="#" id="create-employee">
+        <form id="create-employee">
           <label htmlFor="first-name">First Name</label>
           <input
             type="text"
@@ -86,10 +90,9 @@ function CreateEmployeeView() {
             <Dropdown
               value={state}
               onChange={(e) => setState(e.value)}
-              options={states()}
+              options={statesForSelect()}
               optionLabel="name"
               placeholder="Select a state"
-              className="w-full md:w-14rem"
             />
             <label htmlFor="zip-code">Zip Code</label>
             <input
@@ -104,10 +107,9 @@ function CreateEmployeeView() {
           <Dropdown
             value={department}
             onChange={(e) => setDepartment(e.value)}
-            options={departments()}
+            options={departmentsForSelect()}
             optionLabel="name"
             placeholder="Select a department"
-            className="w-full md:w-14rem"
           />
         </form>
         <button onClick={onSaveForm}>Save</button>
