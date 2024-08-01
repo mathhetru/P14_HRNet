@@ -1,5 +1,9 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @import "./utils/variables";
-@import "./layout/header";
+// @import "./layout/header";
 // @import "./components/tag";
 
 // MAIN ELEMENTS
@@ -10,15 +14,25 @@
   text-decoration: none;
   color: $green;
 }
-body {
-  font-family: $main-font;
-  margin: auto;
-  color: $black;
+
+.kalnia {
+  font-family: $kalnia;
 }
+
+.bg-green-light {
+  background: $green-light;
+}
+
+.bg-green {
+  background: $green;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   height: 100vh;
+  font-family: $roboto;
+  color: $black;
 }

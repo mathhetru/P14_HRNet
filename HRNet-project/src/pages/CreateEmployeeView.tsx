@@ -44,7 +44,7 @@ function CreateEmployeeView() {
 
   return (
     <>
-      <div className="container">
+      <div className="view-current-employee">
         <Link to="/employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
         <form id="create-employee">
