@@ -1,38 +1,39 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 @import "./utils/variables";
-// @import "./layout/header";
-// @import "./components/tag";
+@import "./components/button";
 
 // MAIN ELEMENTS
 * {
   box-sizing: border-box;
 }
+
 * a {
   text-decoration: none;
   color: $green;
-}
-
-.kalnia {
-  font-family: $kalnia;
-}
-
-.bg-green-light {
-  background: $green-light;
-}
-
-.bg-green {
-  background: $green;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  height: 100vh;
+  height: 100%;
   font-family: $roboto;
   color: $black;
+  background: $green;
+}
+
+//FONTS
+.kalnia {
+  font-family: $kalnia;
+}
+
+// COLORS
+.bg-green-light {
+  background: $green-light;
+}
+
+.bg-green {
+  background: $green;
 }

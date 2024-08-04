@@ -12,7 +12,7 @@ function App() {
       <Router>
         {/* <Loader /> */}
         <Header />
-        <div id="container" className="-mt-8 bg-green-light">
+        <div id="container" className="bg-white w-3/4 p-20 rounded-2xl mb-20">
           <Routes>
             <Route path="/employee-list" element={<EmployeeList />} />
             <Route path="/create-employee" element={<CreateEmployeeView />} />

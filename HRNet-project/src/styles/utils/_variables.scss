@@ -6,39 +6,13 @@ $white: #ffffff;
 $grey: #f6f6f6;
 $black: #000000;
 $green: #002b15;
-$green-light: #eaf3c2;
+$green-light: #f2f7e4;
 $transparent: transparent;
 
 //GRADIENTS
 $gradient-green: linear-gradient($green, $black);
 $gradient-black: linear-gradient($transparent, $black);
 
-//MARGINS
-// $base-margin: 0px 20px;
-
 //FONTS
 $roboto: "Roboto", sans-serif;
 $kalnia: "Kalnia", serif;
-
-// //WEIGHTS
-// $weight-bold: 700;
-// $weight-normal: 400;
-// $weight-light: 100;
-
-// //SIZES
-// //desktop
-// $size-desk-404: 18rem; //288px
-// $size-desk-banner: 3rem; //48px
-// $size-desk-title: 2.25rem; //36px
-// $size-desk-subtitle: 1.5rem; //24px
-// $size-desk-text: 1.125rem; //18px
-// $size-desk-small: 0.875rem; //14px
-
-// //phone
-// $size-phone-404: 6rem; //96px
-// $size-phone-banner: 1.5rem; //24px
-// $size-phone-title: 1.125rem; //18px
-// $size-phone-subtitle: 0.875rem; //14px
-// $size-phone-text: 0.8125rem; //13px
-// $size-phone-small: 0.75rem; //12px
-// $size-phone-tag: 0.625rem; //10px

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useStore } from "../store/employees.store.tsx";
 import type {
   DateEmployee,
@@ -45,7 +44,6 @@ function CreateEmployeeView() {
   return (
     <>
       <div className="view-current-employee">
-        <Link to="/employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
         <form id="create-employee">
           <label htmlFor="first-name">First Name</label>
