@@ -1,5 +1,5 @@
 .button {
-  border: 1px solid $white;
+  border: 1px solid $green-light;
   border-radius: 2rem;
   &__link {
     display: flex;
@@ -7,11 +7,11 @@
     padding: 0.5rem 1rem;
   }
   &__text {
-    color: $white;
+    color: $green-light;
     font-weight: 500;
   }
   &:hover {
-    background: $white;
+    background: $green-light;
     transition: 0.2s linear;
   }
   &:hover .button__text {

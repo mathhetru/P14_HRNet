@@ -20,10 +20,10 @@ function Header() {
   };
 
   return (
-    <header className="w-full">
-      <div className="flex items-center w-3/4 mx-auto my-20 justify-between">
+    <header className="w-full pt-20 pb-10">
+      <div className="flex items-center w-3/4 mx-auto justify-between">
         <Link className="flex items-center" to="/">
-          <img src={HRNetLogo} alt="hrnet-logo" className="header-logo__img" />
+          <img src={HRNetLogo} alt="hrnet-logo" />
           <p className="kalnia text-white ml-4 text-2xl tracking-wide">
             HR Net
           </p>

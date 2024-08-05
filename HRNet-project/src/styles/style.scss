@@ -3,6 +3,8 @@
 @import "tailwindcss/utilities";
 @import "./utils/variables";
 @import "./components/button";
+@import "./components/form";
+@import "./components/datatable";
 
 // MAIN ELEMENTS
 * {
@@ -14,14 +16,17 @@
   color: $green;
 }
 
+body {
+  background: $green;
+}
+
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
   font-family: $roboto;
   color: $black;
-  background: $green;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 //FONTS
@@ -34,6 +39,15 @@
   background: $green-light;
 }
 
+.text-green {
+  color: $green-light;
+}
+
 .bg-green {
   background: $green;
+}
+
+// WIDTH
+.w-48 {
+  width: 48%;
 }
