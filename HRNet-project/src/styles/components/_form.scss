@@ -1,0 +1,120 @@
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  &__input {
+    border: 2px solid $green-light;
+    border-radius: 0.3rem;
+    font-weight: 300;
+    padding: 0.2rem;
+    height: 3rem;
+    padding-left: 5px;
+
+    &:hover {
+      background-color: $green-light;
+      transition: 250ms;
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+.form-button {
+  margin-top: 3rem;
+  background: $green;
+  color: $white;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 250ms;
+  transition-duration: 0.5s;
+
+  &:hover {
+    background: $green-light;
+    color: $green;
+  }
+}
+
+.p-calendar {
+  border: 2px solid $green-light;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  height: 3rem;
+
+  &:hover {
+    background-color: $green-light;
+    transition: 250ms;
+    transition-duration: 0.5s;
+  }
+
+  &:hover .p-inputtext {
+    background-color: $green-light;
+    transition: 250ms;
+    transition-duration: 0.5s;
+  }
+}
+
+.p-inputtext {
+  background-color: white;
+  padding-left: 5px;
+  font-weight: 300;
+  // &:focus {
+  //   border: 2px solid $green-light;
+  // }
+}
+
+.p-dropdown {
+  border: 2px solid $green-light;
+  border-radius: 0.3rem;
+  font-weight: 300;
+  padding: 0.2rem;
+  height: 3rem;
+  color: $black;
+
+  &-trigger {
+    color: $black;
+  }
+
+  &-label {
+    color: $black;
+  }
+
+  &:hover {
+    background-color: $green-light;
+    transition: 250ms;
+    transition-duration: 0.5s;
+  }
+
+  &:hover .p-inputtext {
+    background-color: $green-light;
+    transition: 250ms;
+    transition-duration: 0.5s;
+  }
+}
+
+.address {
+  position: relative;
+  margin: 1rem 0;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $green-light;
+    height: 1px;
+    width: 100%;
+    top: -60px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $green-light;
+    height: 1px;
+    width: 100%;
+  }
+}
