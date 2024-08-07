@@ -23,6 +23,7 @@ function CreateEmployeeView() {
   const [state, setState] = useState<State>(null);
   const [birthDate, setBirthDate] = useState<DateEmployee>(new Date());
   const [startDate, setStartDate] = useState<DateEmployee>(new Date());
+  // const [isModalOpen, setIsModalOpen] = useState(false);
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
 
@@ -39,7 +40,6 @@ function CreateEmployeeView() {
       state,
       zipCode,
     });
-    console.log(employeeToAdd);
     addEmployee(employeeToAdd);
   };
 
@@ -180,9 +180,6 @@ function CreateEmployeeView() {
           </div>
         </form>
       </div>
-      {/* <div id="confirmation" className="modal">
-        Employee Created!
-      </div> */}
     </>
   );
 }

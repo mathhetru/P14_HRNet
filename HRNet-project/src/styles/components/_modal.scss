@@ -1,0 +1,27 @@
+.m-modal {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0px;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+  display: block;
+  &-content {
+    border-radius: 5px;
+    background-color: $white;
+    max-width: 50vw;
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    transform: translateY(35%);
+    animation-name: modalopen;
+    animation-duration: 0.8s;
+  }
+}

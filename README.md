@@ -1,6 +1,7 @@
 # P14 - HRNet Project
 
 > Le projet 14 de la formation Openclassrooms Développeur Front-end "Faites passer une librairie jQuery vers React"
+
 > 14th project of Front-end Web Developper training by OpenClassrooms "Switch a jQuery library to React"
 
 This codebase contains the code needed to run the backend and the frontend for HRNet.
@@ -9,7 +10,7 @@ This codebase contains the code needed to run the backend and the frontend for H
 
 ### Prerequisites
 
-Argent Bank uses the following tech stack:
+HRNet uses the following tech stack:
 
 - [Node.js v12](https://nodejs.org/en/)
 - [React + Vite](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
