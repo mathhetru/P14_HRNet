@@ -52,7 +52,10 @@ export const formatEmployeeForm = (employee: EmployeeForm) => {
   };
 };
 
-export const filterEmployees = (searchValue: string, employeesList: Employee[]) => {
+export const filterEmployees = (
+  searchValue: string,
+  employeesList: Employee[],
+) => {
   return employeesList.filter(
     (employee) =>
       employee.firstName.toLowerCase().includes(searchValue) ||
@@ -63,4 +66,4 @@ export const filterEmployees = (searchValue: string, employeesList: Employee[]) 
       employee.state.toLowerCase().includes(searchValue) ||
       employee.zipCode.toLowerCase().includes(searchValue),
   );
-}
+};

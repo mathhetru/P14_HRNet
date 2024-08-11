@@ -3,6 +3,7 @@ import { useStore } from "../store/employees.store.tsx";
 import type {
   DateEmployee,
   Department,
+  Employee,
   State,
 } from "../types/employees.type.ts";
 import { Calendar } from "primereact/calendar";
@@ -28,7 +29,7 @@ function CreateEmployeeView() {
 
   const onSaveForm = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const employeeToAdd = formatEmployeeForm({
+    const employeeToAdd: Employee = formatEmployeeForm({
       firstName,
       lastName,
       startDate,
@@ -65,6 +66,7 @@ function CreateEmployeeView() {
                 onChange={(e) => {
                   setFirstName(e.target.value);
                 }}
+                required
               />
             </div>
             <div className="form-field w-48">
