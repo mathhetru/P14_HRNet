@@ -56,14 +56,15 @@ export const filterEmployees = (
   searchValue: string,
   employeesList: Employee[],
 ) => {
+  const formattedSearchValue = searchValue.trim().toLowerCase();
   return employeesList.filter(
     (employee) =>
-      employee.firstName.toLowerCase().includes(searchValue) ||
-      employee.lastName.toLowerCase().includes(searchValue) ||
-      employee.department.toLowerCase().includes(searchValue) ||
-      employee.street.toLowerCase().includes(searchValue) ||
-      employee.city.toLowerCase().includes(searchValue) ||
-      employee.state.toLowerCase().includes(searchValue) ||
-      employee.zipCode.toLowerCase().includes(searchValue),
+      employee.firstName.toLowerCase().includes(formattedSearchValue) ||
+      employee.lastName.toLowerCase().includes(formattedSearchValue) ||
+      employee.department.toLowerCase().includes(formattedSearchValue) ||
+      employee.street.toLowerCase().includes(formattedSearchValue) ||
+      employee.city.toLowerCase().includes(formattedSearchValue) ||
+      employee.state.toLowerCase().includes(formattedSearchValue) ||
+      employee.zipCode.toLowerCase().includes(formattedSearchValue),
   );
 };

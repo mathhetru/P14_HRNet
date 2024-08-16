@@ -10,7 +10,7 @@ function Header() {
   const employeeListBtn = () => {
     if (isUserOnEmployeeListPage) {
       return (
-        <button className="button mr-5">
+        <button className="button mb-5 lg:mr-5 lg:mb-0">
           <Link className="button__link" to="/employee-list">
             <p className="button__text">Current employees</p>
           </Link>
@@ -28,7 +28,7 @@ function Header() {
             HR Net
           </p>
         </Link>
-        <div>
+        <div className="flex flex-col items-end lg:flex-row items-start">
           {employeeListBtn()}
           <button className="button">
             <Link className="button__link" to="/create-employee">

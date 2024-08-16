@@ -22,26 +22,40 @@ function CreateEmployeeView() {
   const [department, setDepartment] = useState<Department>(null);
   const [street, setStreet] = useState("");
   const [state, setState] = useState<State>(null);
-  const [birthDate, setBirthDate] = useState<DateEmployee>(new Date());
-  const [startDate, setStartDate] = useState<DateEmployee>(new Date());
+  const [birthDate, setBirthDate] = useState<DateEmployee>(null);
+  const [startDate, setStartDate] = useState<DateEmployee>(null);
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
 
   const onSaveForm = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const employeeToAdd: Employee = formatEmployeeForm({
-      firstName,
-      lastName,
-      startDate,
-      department,
-      birthDate,
-      street,
-      city,
-      state,
-      zipCode,
-    });
-    console.log(employeeToAdd);
-    addEmployee(employeeToAdd);
+    if (
+      !firstName ||
+      !lastName ||
+      !department ||
+      !street ||
+      !state ||
+      !birthDate ||
+      !startDate ||
+      !city ||
+      !zipCode
+    ) {
+      alert("Please, fill in all fields before saving.");
+    } else {
+      const employeeToAdd: Employee = formatEmployeeForm({
+        firstName,
+        lastName,
+        startDate,
+        department,
+        birthDate,
+        street,
+        city,
+        state,
+        zipCode,
+      });
+      console.log(employeeToAdd);
+      addEmployee(employeeToAdd);
+    }
   };
 
   return (
@@ -60,6 +74,7 @@ function CreateEmployeeView() {
                 Firstname
               </label>
               <input
+                placeholder="John"
                 className="form-field__input"
                 type="text"
                 id="first-name"
@@ -74,6 +89,7 @@ function CreateEmployeeView() {
                 Lastname
               </label>
               <input
+                placeholder="Doe"
                 className="form-field__input"
                 type="text"
                 id="last-name"
@@ -89,6 +105,7 @@ function CreateEmployeeView() {
                 Date of birth
               </label>
               <Calendar
+                placeholder="Select a date"
                 value={birthDate}
                 onChange={(e) => setBirthDate(e.value)}
                 showIcon
@@ -99,6 +116,7 @@ function CreateEmployeeView() {
                 Start date
               </label>
               <Calendar
+                placeholder="Select a date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.value)}
                 showIcon
@@ -113,6 +131,7 @@ function CreateEmployeeView() {
                   Street
                 </label>
                 <input
+                  placeholder="1 Random Street"
                   className="form-field__input"
                   id="street"
                   type="text"
@@ -126,6 +145,7 @@ function CreateEmployeeView() {
                   City
                 </label>
                 <input
+                  placeholder="New York"
                   className="form-field__input"
                   id="city"
                   type="text"
@@ -153,6 +173,7 @@ function CreateEmployeeView() {
                   Zip code
                 </label>
                 <input
+                  placeholder="111"
                   className="form-field__input"
                   id="zip-code"
                   type="number"

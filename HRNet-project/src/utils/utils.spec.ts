@@ -125,7 +125,19 @@ describe("formatEmployeeForm", () => {
   });
 
   it("should return the employee form formatted with empty strings if the employee form is null", () => {
-    const result = formatEmployeeForm(null);
+    const employee: EmployeeForm = {
+      firstName: "",
+      lastName: "",
+      startDate: null,
+      department: null,
+      birthDate: null,
+      street: "",
+      city: "",
+      state: null,
+      zipCode: "",
+    };
+
+    const result = formatEmployeeForm(employee);
     expect(result).toEqual({
       id: Date.now(),
       firstName: "",
@@ -138,5 +150,145 @@ describe("formatEmployeeForm", () => {
       state: "",
       zipCode: "",
     });
+  });
+});
+
+describe("filterEmployees", () => {
+  it("should return the employees filtered by the search query", () => {
+    const employees = [
+      {
+        id: 0,
+        firstName: "John",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Sales",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+      {
+        id: 1,
+        firstName: "Jane",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Engineering",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+    ];
+
+    const searchQuery = "John";
+    const result = filterEmployees(searchQuery, employees);
+    console.log(result);
+    expect(result).toEqual([
+      {
+        id: 0,
+        firstName: "John",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Sales",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+    ]);
+  });
+
+  it("should return all employees if the search query is empty", () => {
+    const employees = [
+      {
+        id: 0,
+        firstName: "John",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Sales",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+      {
+        id: 1,
+        firstName: "Jane",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Engineering",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+    ];
+
+    const searchQuery = "";
+    const result = filterEmployees(searchQuery, employees);
+    expect(result).toEqual([
+      {
+        id: 0,
+        firstName: "John",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Sales",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+      {
+        id: 1,
+        firstName: "Jane",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Engineering",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+    ]);
+  });
+
+  it("should return an empty array if the search query does not match any employee", () => {
+    const employees = [
+      {
+        id: 0,
+        firstName: "John",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Sales",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+      {
+        id: 1,
+        firstName: "Jane",
+        lastName: "Doe",
+        startDate: "01/09/2021",
+        department: "Engineering",
+        birthDate: "01/01/1990",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90001",
+      },
+    ];
+
+    const searchQuery = "Alice";
+    const result = filterEmployees(searchQuery, employees);
+    expect(result).toEqual([]);
   });
 });

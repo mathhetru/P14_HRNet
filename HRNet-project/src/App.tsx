@@ -11,7 +11,7 @@ function App() {
   return (
     <PrimeReactProvider>
       <Router>
-        {/* <Loader /> */}
+        {/* ? <Loader /> */}
         <Header />
           <Routes>
             <Route path="/employee-list" element={<EmployeeList />} />
