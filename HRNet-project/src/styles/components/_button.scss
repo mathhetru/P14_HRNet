@@ -20,15 +20,3 @@
   }
 }
 
-// BREAKPOINT PHONE HEADER
-@media screen and (max-width: 1024px) {
-  .button {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    &__link {
-      text-transform: uppercase;
-      margin-left: 0;
-    }
-  }
-}
