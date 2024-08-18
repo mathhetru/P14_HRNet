@@ -6,38 +6,36 @@ import type {
 } from "../types/employees.type.ts";
 import {
   departmentsForSelect,
+  statesForSelect,
   formatDateToDayTime,
   getStateName,
   getDepartmentName,
   formatEmployeeForm,
   filterEmployees,
 } from "./utils";
+import { departmentsData } from "../data/departmentsData.ts";
+import { statesData } from "../data/statesData.ts";
 
 describe("departmentsForSelect", () => {
   it("should return the departments data with id", () => {
     const result = departmentsForSelect();
-    expect(result).toEqual([
-      {
-        id: 0,
-        name: "Sales",
-      },
-      {
-        id: 1,
-        name: "Marketing",
-      },
-      {
-        id: 2,
-        name: "Engineering",
-      },
-      {
-        id: 3,
-        name: "Human Resources",
-      },
-      {
-        id: 4,
-        name: "Legal",
-      },
-    ]);
+    const expected = departmentsData.map((department, index) => ({
+      name: department.name,
+      id: index,
+    }));
+    expect(result).toEqual(expected);
+  });
+});
+
+describe("statesForSelect", () => {
+  it("should return the states data with id", () => {
+    const result = statesForSelect();
+    const expected = statesData.map((state, index) => ({
+      name: state.name,
+      abbreviation: state.abbreviation,
+      id: index,
+    }));
+    expect(result).toEqual(expected);
   });
 });
 

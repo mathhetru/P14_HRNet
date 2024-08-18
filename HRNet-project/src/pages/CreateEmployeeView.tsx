@@ -13,6 +13,7 @@ import {
   statesForSelect,
   formatEmployeeForm,
 } from "../utils/utils.ts";
+import Modal from "simplemathmodal";
 
 function CreateEmployeeView() {
   const { addEmployee } = useStore();
@@ -53,7 +54,6 @@ function CreateEmployeeView() {
         state,
         zipCode,
       });
-      console.log(employeeToAdd);
       addEmployee(employeeToAdd);
     }
   };
@@ -200,6 +200,7 @@ function CreateEmployeeView() {
             <button className="form-button" onClick={onSaveForm}>
               Save
             </button>
+            <Modal />
           </div>
         </form>
       </div>
