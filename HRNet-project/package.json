@@ -23,7 +23,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.24.1",
-    "simplemathmodal": "^0.0.7",
+    "simple-modal-math": "^0.0.5",
     "vitest": "^2.0.4",
     "zustand": "^4.5.4"
   },

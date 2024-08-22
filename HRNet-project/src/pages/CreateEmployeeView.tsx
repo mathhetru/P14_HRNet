@@ -13,11 +13,10 @@ import {
   statesForSelect,
   formatEmployeeForm,
 } from "../utils/utils.ts";
-import Modal from "simplemathmodal";
+import { Modal } from "simple-modal-math";
 
 function CreateEmployeeView() {
   const { addEmployee } = useStore();
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [department, setDepartment] = useState<Department>(null);
@@ -27,6 +26,7 @@ function CreateEmployeeView() {
   const [startDate, setStartDate] = useState<DateEmployee>(null);
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   const onSaveForm = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -55,7 +55,12 @@ function CreateEmployeeView() {
         zipCode,
       });
       addEmployee(employeeToAdd);
+      setIsOpen(!isOpen);
     }
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -198,9 +203,17 @@ function CreateEmployeeView() {
           </div>
           <div className="flex justify-center">
             <button className="form-button" onClick={onSaveForm}>
-              Save
+              SAVE
             </button>
-            <Modal />
+            <Modal
+              isOpen={isOpen}
+              closable={true}
+              mainContent="The employee has been added successfully."
+              hasFooter={true}
+              buttonFooter="Close"
+              modalSize="medium"
+              onClose={handleClose}
+            />
           </div>
         </form>
       </div>
