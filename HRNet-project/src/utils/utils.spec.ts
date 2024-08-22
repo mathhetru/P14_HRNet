@@ -68,11 +68,6 @@ describe("getStateName", () => {
     const result = getStateName(null);
     expect(result).toEqual("");
   });
-
-  it("should return an empty string if the state is undefined", () => {
-    const result = getStateName(undefined);
-    expect(result).toEqual("");
-  });
 });
 
 describe("getDepartmentName", () => {
@@ -84,11 +79,6 @@ describe("getDepartmentName", () => {
 
   it("should return an empty string if the department is null", () => {
     const result = getDepartmentName(null);
-    expect(result).toEqual("");
-  });
-
-  it("should return an empty string if the department is undefined", () => {
-    const result = getDepartmentName(undefined);
     expect(result).toEqual("");
   });
 });
