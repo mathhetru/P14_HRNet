@@ -172,7 +172,6 @@ describe("filterEmployees", () => {
 
     const searchQuery = "John";
     const result = filterEmployees(searchQuery, employees);
-    console.log(result);
     expect(result).toEqual([
       {
         id: 0,

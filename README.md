@@ -4,7 +4,10 @@
 
 > 14th project of Front-end Web Developper training by OpenClassrooms "Switch a jQuery library to React"
 
-This codebase contains the code needed to run the backend and the frontend for HRNet.
+This codebase contains the code needed to run the frontend for HRNet.
+Find the reusable modal component built for this project :
+[GitHub simple-math-modal](https://github.com/mathhetru/simpleMathModal)
+[npm package simple-math-modal](https://www.npmjs.com/package/simple-modal-math)
 
 ## Getting Started
 
@@ -12,14 +15,16 @@ This codebase contains the code needed to run the backend and the frontend for H
 
 HRNet uses the following tech stack:
 
-- [Node.js v12](https://nodejs.org/en/)
+- [Node.js 20.9.0](https://nodejs.org/en/)
 - [React + Vite](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
 
 Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
 
-````bash
 # Check Node.js version
+
+```bash
 node --version
+```
 
 ### Instructions
 
@@ -29,15 +34,22 @@ node --version
 
 ## Frontend
 
+# Go to the repository
+
 ```bash
-# Go to the back repository
-cd front/
+cd HRNet-project/
+```
 
 # Install dependencies
+
+```bash
 npm install
+```
 
 # Start local dev server
+
+```bash
 npm run dev
-````
+```
 
 Your front server should now be running at http://localhost:5173/!

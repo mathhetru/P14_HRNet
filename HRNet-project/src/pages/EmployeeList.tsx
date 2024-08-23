@@ -45,7 +45,7 @@ function HomeView() {
           value={filteredEmployeesList}
           paginator
           rows={10}
-          rowsPerPageOptions={[10, 25, 50]}
+          rowsPerPageOptions={[5, 10, 25, 50]}
           emptyMessage="No employees found."
           stripedRows
         >
