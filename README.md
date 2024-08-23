@@ -20,11 +20,13 @@ HRNet uses the following tech stack:
 
 Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
 
-# Check Node.js version
+### Check Node.js version
 
 ```bash
 node --version
 ```
+
+## Frontend
 
 ### Instructions
 
@@ -32,21 +34,19 @@ node --version
 2. Open a terminal window in the cloned project
 3. Run the following commands:
 
-## Frontend
-
-# Go to the repository
+### Go to the repository
 
 ```bash
 cd HRNet-project/
 ```
 
-# Install dependencies
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-# Start local dev server
+### Start local dev server
 
 ```bash
 npm run dev
