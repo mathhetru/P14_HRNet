@@ -11,13 +11,12 @@ function App() {
   return (
     <PrimeReactProvider>
       <Router>
-        {/* ? <Loader /> */}
         <Header />
-          <Routes>
-            <Route path="/employee-list" element={<EmployeeList />} />
-            <Route path="/create-employee" element={<CreateEmployeeView />} />
-            <Route path="*" element={<CreateEmployeeView />}></Route>
-          </Routes>
+        <Routes>
+          <Route path="/employee-list" element={<EmployeeList />} />
+          <Route path="/create-employee" element={<CreateEmployeeView />} />
+          <Route path="*" element={<CreateEmployeeView />}></Route>
+        </Routes>
         <Footer />
       </Router>
     </PrimeReactProvider>

@@ -6,13 +6,30 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   const location = useLocation();
   const isUserOnEmployeeListPage = location.pathname !== "/employee-list";
+  const isUserOnCreateEmployee = location.pathname !== "/create-employee" && location.pathname !== "/";
 
   const employeeListBtn = () => {
     if (isUserOnEmployeeListPage) {
       return (
-        <button className="button mb-5 lg:mr-5 lg:mb-0">
+        <button className="button">
           <Link className="button__link" to="/employee-list">
             <p className="button__text">Current employees</p>
+          </Link>
+        </button>
+      );
+    }
+  };
+
+  const createEmployeeBtn = () => {
+    if (isUserOnCreateEmployee) {
+      return (
+        <button className="button">
+          <Link className="button__link" to="/create-employee">
+            <p className="button__text">Create new employee</p>
+            <FontAwesomeIcon
+              className="button__text ml-5 text-xl"
+              icon={faArrowRight}
+            />
           </Link>
         </button>
       );
@@ -30,15 +47,7 @@ function Header() {
         </Link>
         <div className="flex flex-col items-end lg:flex-row items-start">
           {employeeListBtn()}
-          <button className="button">
-            <Link className="button__link" to="/create-employee">
-              <p className="button__text">Create new employee</p>
-              <FontAwesomeIcon
-                className="button__text ml-5 text-xl"
-                icon={faArrowRight}
-              />
-            </Link>
-          </button>
+          {createEmployeeBtn()}
         </div>
       </div>
     </header>
