@@ -83,6 +83,7 @@ function CreateEmployeeView() {
                 className="form-field__input"
                 type="text"
                 id="first-name"
+                name="first-name"
                 onChange={(e) => {
                   setFirstName(e.target.value);
                 }}
@@ -98,6 +99,7 @@ function CreateEmployeeView() {
                 className="form-field__input"
                 type="text"
                 id="last-name"
+                name="last-name"
                 onChange={(e) => {
                   setLastName(e.target.value);
                 }}
@@ -139,6 +141,7 @@ function CreateEmployeeView() {
                   placeholder="1 Random Street"
                   className="form-field__input"
                   id="street"
+                  name="street"
                   type="text"
                   onChange={(e) => {
                     setStreet(e.target.value);
@@ -153,6 +156,7 @@ function CreateEmployeeView() {
                   placeholder="New York"
                   className="form-field__input"
                   id="city"
+                  name="city"
                   type="text"
                   onChange={(e) => {
                     setCity(e.target.value);
@@ -182,6 +186,7 @@ function CreateEmployeeView() {
                   className="form-field__input"
                   id="zip-code"
                   type="number"
+                  name="zip-code"
                   onChange={(e) => {
                     setZipCode(e.target.value);
                   }}
