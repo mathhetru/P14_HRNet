@@ -8,7 +8,7 @@
     margin-bottom: 0.5rem;
   }
   &__input {
-    border: 2px solid $green-light;
+    border: 2px solid $green-dark;
     border-radius: 0.3rem;
     font-weight: 300;
     padding: 0.2rem;
@@ -19,6 +19,9 @@
       background-color: $green-light;
       transition: 250ms;
       transition-duration: 0.5s;
+    }
+    &::placeholder {
+      color: $grey-dark;
     }
   }
 }
@@ -43,7 +46,7 @@
 }
 
 .p-calendar {
-  border: 2px solid $green-light;
+  border: 2px solid $green-dark;
   border-radius: 0.3rem;
   padding: 0.2rem;
   height: 3rem;
@@ -58,6 +61,9 @@
     background-color: $green-light;
     transition: 250ms;
     transition-duration: 0.5s;
+    &::placeholder {
+      color: $grey-dark;
+    }
   }
 }
 
@@ -65,13 +71,10 @@
   background-color: white;
   padding-left: 5px;
   font-weight: 300;
-  // &:focus {
-  //   border: 2px solid $green-light;
-  // }
 }
 
 .p-dropdown {
-  border: 2px solid $green-light;
+  border: 2px solid $green-dark;
   border-radius: 0.3rem;
   font-weight: 300;
   padding: 0.2rem;
@@ -100,7 +103,7 @@
 }
 
 .p-placeholder {
-  color: rgb(173, 173, 173);
+  color: $grey-dark;
 }
 
 .address {
