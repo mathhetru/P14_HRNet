@@ -6,7 +6,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   const location = useLocation();
   const isUserOnEmployeeListPage = location.pathname !== "/employee-list";
-  const isUserOnCreateEmployee = location.pathname !== "/create-employee" && location.pathname !== "/";
+  const isUserOnCreateEmployee =
+    location.pathname !== "/create-employee" && location.pathname !== "/";
 
   const employeeListBtn = () => {
     if (isUserOnEmployeeListPage) {
@@ -40,7 +41,7 @@ function Header() {
     <header className="w-full pt-20 pb-10">
       <div className="flex items-center w-3/4 mx-auto justify-between">
         <Link className="flex items-center" to="/">
-          <img src={HRNetLogo} alt="hrnet-logo" />
+          <img src={HRNetLogo} alt="hrnet-logo" className="header__img" />
           <p className="kalnia text-white ml-4 text-2xl tracking-wide">
             HR Net
           </p>
