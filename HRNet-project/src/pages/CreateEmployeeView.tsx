@@ -115,6 +115,7 @@ function CreateEmployeeView() {
                 placeholder="Select a date"
                 value={birthDate}
                 onChange={(e) => setBirthDate(e.value)}
+                inputId="date-of-birth"
                 showIcon
               />
             </div>
@@ -126,6 +127,7 @@ function CreateEmployeeView() {
                 placeholder="Select a date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.value)}
+                inputId="start-date"
                 showIcon
               />
             </div>
@@ -175,6 +177,7 @@ function CreateEmployeeView() {
                   options={statesForSelect()}
                   optionLabel="name"
                   placeholder="Select a state"
+                  aria-label="state"
                 />
               </div>
               <div className="form-field w-48">
@@ -204,6 +207,7 @@ function CreateEmployeeView() {
               options={departmentsForSelect()}
               optionLabel="name"
               placeholder="Select a department"
+              aria-label="department"
             />
           </div>
           <div className="flex justify-center">
