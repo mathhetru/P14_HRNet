@@ -27,6 +27,7 @@ function CreateEmployeeView() {
   const [city, setCity] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [sentenceForModal, setSentenceForModal] = useState("");
 
   const onSaveForm = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -41,7 +42,10 @@ function CreateEmployeeView() {
       !city ||
       !zipCode
     ) {
-      alert("Please, fill in all fields before saving.");
+      setSentenceForModal(
+        "❌ The employee has NOT been added. Please, fill in all fields before saving.",
+      );
+      setIsOpen(!isOpen);
     } else {
       const employeeToAdd: Employee = formatEmployeeForm({
         firstName,
@@ -55,6 +59,7 @@ function CreateEmployeeView() {
         zipCode,
       });
       addEmployee(employeeToAdd);
+      setSentenceForModal("✅ The employee has been added successfully.");
       setIsOpen(!isOpen);
     }
   };
@@ -217,7 +222,7 @@ function CreateEmployeeView() {
             <Modal
               isOpen={isOpen}
               closable={true}
-              mainContent="The employee has been added successfully."
+              mainContent={sentenceForModal}
               hasFooter={true}
               buttonFooter="Close"
               modalSize="medium"

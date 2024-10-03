@@ -39,7 +39,7 @@ function HomeView() {
             onInput={handleSearchInput}
           />
         </div>
-
+        
         <DataTable
           size={"small"}
           value={filteredEmployeesList}
