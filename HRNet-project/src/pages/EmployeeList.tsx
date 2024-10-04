@@ -31,15 +31,18 @@ function HomeView() {
         className="bg-white w-3/4 rounded-2xl mx-auto h-full p-20"
       >
         <div className="flex items-center justify-end mb-10">
-          <p className="mr-5">Search</p>
+          <label htmlFor="search" className="mr-5">
+            Search
+          </label>
           <input
             className="form-field__input w-1/3"
             type="text"
             id="search"
+            name="search"
             onInput={handleSearchInput}
           />
         </div>
-        
+
         <DataTable
           size={"small"}
           value={filteredEmployeesList}
